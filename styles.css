@@ -19,6 +19,14 @@ h1 {
     font-size: 5em;
 }
 
+#description {
+    text-align: center;
+}
+
+#location {
+    text-align: center;
+}
+
 body.sunny {
     background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
 }
