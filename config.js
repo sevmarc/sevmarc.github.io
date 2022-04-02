@@ -1,5 +1,19 @@
-var config = {
-    key: '1031c4dcd061633e3b37906e040de487', // add support for environment variable
-    lat0: 47.3441,
-    lon0: 18.7483,
+var raw_config = {
+    'a2V5': 'MTAzMWM0ZGNkMDYxNjMzZTNiMzc5MDZlMDQwZGU0ODc=',
+    'bGF0MA==': 'NDcuMzQ0MQ==',
+    'bG9uMA==': 'MTguNzQ4Mw==',
+}
+
+var debug = false
+
+var config = {}
+
+for (const [key, value] of Object.entries(raw_config)) {
+    config[atob(key)] = atob(value)
+}
+
+if (debug) { // print decoded key - value pairs
+    for (const [key, value] of Object.entries(config)) {
+        console.log(key, value);
+    }
 }
